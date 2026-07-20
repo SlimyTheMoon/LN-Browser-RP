@@ -83,9 +83,9 @@ function getval(sel)
 	if (sel.value == 4) 
 	// Template Four
 	{
-		document.form1.commid.value = "";
-		document.form1.position.value = "";
-		document.form1.charposition.value = "";
+		document.form1.commid.value = "Claier Valenzuela";
+		document.form1.position.value = "Lieutenant Commander";
+		document.form1.charposition.value = "Lieutenant Commander";
 		// document.form1.recipient.value = "";
 		// document.form1.ccrecipient.value = "";
 		// document.form1.bccrecipient.value = "";
