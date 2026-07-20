@@ -5,7 +5,7 @@ Encryption: [color=#BF0000]Maximum[/color][/size]
 
 [size=large]External Security & Research Division
 Liberty Navy, First Fleet
-{{RANK}} {{NICKNAME}} [/size]
+{{CHARPOSITION}} {{NICKNAME}} [/size]
 [/font][/align][/color]
 
 [hrc]lightblue[/hrc]
@@ -21,7 +21,7 @@ Liberty Navy, First Fleet
 [/pi][/color][/align]
 
 [pi amount=10][color=#FFFFFF][b]{{NICKNAME}}[/b]
-{{RANK}}, ESRD
+{{CHARPOSITION}}, ESRD
 1FLT, Liberty Navy 
 [/color][/pi][/font]
 
