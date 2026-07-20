@@ -1,4 +1,3 @@
-[quote="Lord Caedus" pid='2403592' dateline='1784479012']
 [hrc]lightblue[/hrc][float=left][img=220x150]https://i.imgur.com/mgasxy7.png[/img][/float]
 
 [color=#FFBF40][align=right][font=Cinzel][size=x-large]Incoming Transmission 
@@ -28,4 +27,3 @@ Liberty Navy, First Fleet
 
 [pi amount=20][hr]
 [size=x-small][b][color=#FFFFFF]Important:[/color][/b] [color=lightblue]This communication remains the property of the Libertonian Armed Forces and is subject to the jurisdiction of the Neural Net Communications Act 807 A.S, Section 30. If you have received this message in error, you are requested to contact the sender and delete the communication.[/color][/size][/pi]
-[/quote]
