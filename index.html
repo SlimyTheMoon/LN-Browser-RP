@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Expendables &mdash; Message Generator</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/preset.js"></script>
+</head>
+<body>
+
+<!-- Background -->
+<div id="bg"></div>
+
+<!-- App Shell -->
+<div id="app">
+
+	<!-- Header -->
+	<header id="app-header">
+		<h1><span class="accent">[LN]</span> Message Generator</h1>
+		<p class="subtitle">Create your themed forum message. Optional fields left blank won't appear in the output.</p>
+	</header>
+
+	<!-- Main form card -->
+	<main id="app-main">
+		<form id="form1" name="form1" autocomplete="off">
+			<input type="hidden" name="check" value="1">
+			<input type="hidden" name="footerimg" id="footerimg" value="">
+
+			<!-- Toggle switches row -->
+			<section class="toggle-row">
+				<label class="toggle"><input type="checkbox" id="cb_post" name="cb_post" checked><span class="slider"></span><span class="toggle-label">Recipients &amp; Subject</span></label>
+				<label class="toggle"><input type="checkbox" id="cb_attach" name="cb_attach"><span class="slider"></span><span class="toggle-label">Attachment</span></label>
+				<label class="toggle"><input type="checkbox" id="ishiring" name="ishiring"><span class="slider"></span><span class="toggle-label">Recruiting Banner</span></label>
+			</section>
+
+			<!-- Template & Preset -->
+			<section class="form-section">
+				<h2 class="section-title"><i class="fas fa-layer-group"></i> Template &amp; Preset</h2>
+				<div class="field-row two-col">
+					<div class="field">
+						<label for="templateChooser">Template</label>
+						<div class="select-combo">
+							<select id="templateChooser"><option value="">- Select template -</option></select>
+						</div>
+					</div>
+					<div class="field">
+						<label for="preset">Preset</label>
+						<select name="preset" id="preset" onchange="getval(this);">
+							<option value="0">- Blank canvas -</option>
+							<option value="1">Sophia Cleveland &ndash; Fleet Admiral</option>
+							<option value="2">Katelyn Simmons &ndash; Admiral</option>
+							<option value="3">Chris "Otter" Richmond &ndash; Lieutenant</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<!-- Personal Info -->
+			<section class="form-section">
+				<h2 class="section-title"><i class="fas fa-user-tag"></i> Personal Info</h2>
+				<div class="field">
+					<label for="headerimg">Header Image <span class="opt">(optional)</span></label>
+					<input type="text" name="headerimg" id="headerimg" placeholder="https://site.com/image.jpg" maxlength="200">
+				</div>
+				<div class="field-row two-col">
+					<div class="field">
+						<label for="commid">Name <span class="req">*</span></label>
+						<input type="text" name="commid" id="commid" placeholder="John Doe" required maxlength="100">
+					</div>
+					<div class="field">
+						<label for="position">Position <span class="opt">(optional)</span></label>
+						<input type="text" name="position" id="position" placeholder="Pilot, Administrator..." maxlength="50">
+					</div>
+				</div>
+				<div class="field-row three-col">
+					<div class="field">
+						<label for="charposition">Character Position <span class="opt">(opt)</span></label>
+						<input type="text" name="charposition" id="charposition" placeholder="1, 2, ..." maxlength="25">
+					</div>
+					<div class="field">
+						<label for="encryption">Encryption <span class="opt">(opt)</span></label>
+						<input type="text" name="encryption" id="encryption" placeholder="AES-256" maxlength="100">
+					</div>
+					<div class="field field-btn-align" style="display:flex;gap:.5rem;align-items:flex-end">
+						<select id="encryptionStyle" title="Encryption style">
+							<option value="ex">Standard</option>
+							<option value="rhw">Covert</option>
+						</select>
+						<button id="btnRandomEncryption" type="button" class="btn btn-secondary"><i class="fas fa-random"></i> Random</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Recipients (conditional) -->
+			<section class="form-section" id="hiddenDiv1">
+				<h2 class="section-title"><i class="fas fa-envelope"></i> Recipients &amp; Subject</h2>
+				<div class="field-row two-col">
+					<div class="field">
+						<label for="recipient">Recipient(s)</label>
+						<input type="text" name="recipient" id="recipient" placeholder="Recipient name(s)" maxlength="200">
+					</div>
+					<div class="field">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" placeholder="Message subject" maxlength="100">
+					</div>
+				</div>
+				<div class="field-row two-col">
+					<div class="field">
+						<label for="ccrecipient">CC <span class="opt">(optional)</span></label>
+						<input type="text" name="ccrecipient" id="ccrecipient" placeholder="CC recipients" maxlength="200">
+					</div>
+					<div class="field">
+						<label for="bccrecipient">BCC <span class="opt">(optional)</span></label>
+						<input type="text" name="bccrecipient" id="bccrecipient" placeholder="BCC recipients" maxlength="200">
+					</div>
+				</div>
+			</section>
+
+			<!-- Message -->
+			<section class="form-section">
+				<h2 class="section-title"><i class="fas fa-comment-alt"></i> Message</h2>
+				<div class="field">
+					<label for="message">Body <span class="req">*</span></label>
+					<textarea name="message" id="message" placeholder="Write your message here. Press Enter for a new line, double Enter for a paragraph break." required rows="8"></textarea>
+				</div>
+			</section>
+
+			<!-- Attachment (conditional) -->
+			<section class="form-section" id="hiddenDiv2" style="display:none">
+				<h2 class="section-title"><i class="fas fa-paperclip"></i> Attachment</h2>
+				<div class="field">
+					<label for="titleattach">Title <span class="opt">(optional)</span></label>
+					<input type="text" name="titleattach" id="titleattach" placeholder="Proof of Delivery, Documents enclosed..." maxlength="75">
+				</div>
+				<div class="field">
+					<label for="attachment">Content <span class="opt">(optional)</span></label>
+					<textarea name="attachment" id="attachment" placeholder="Embed text as a spoiler block." rows="6"></textarea>
+				</div>
+			</section>
+
+			<!-- Actions -->
+			<section class="form-actions">
+				<input type="reset" id="reset" value="Reset" class="btn btn-outline">
+			</section>
+		</form>
+
+		<!-- BBCode Output -->
+		<section class="output-section">
+			<h2 class="section-title"><i class="fas fa-code"></i> Generated BBCode</h2>
+			<textarea id="generatedBBCode" readonly rows="6"></textarea>
+			<div class="output-actions">
+				<button id="btnCopyBBCode" type="button" class="btn btn-primary"><i class="fas fa-copy"></i> Copy</button>
+				<button id="btnPreviewBBCode" type="button" class="btn btn-accent"><i class="fas fa-eye"></i> Preview</button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer id="app-footer">
+		<p>&copy; [LN]</p>
+	</footer>
+</div>
+
+<!-- BBCode Preview Modal -->
+<div id="bbcode-modal" class="modal-overlay" style="display:none">
+	<div class="modal-container">
+		<div class="modal-header">
+			<h3>MyBB Forum Preview</h3>
+			<button id="btnCloseModal" class="modal-close" type="button">&times;</button>
+		</div>
+		<div class="modal-body">
+			<div class="mybb-post-wrapper">
+				<div class="mybb-post-header">
+					<span>[LN]</span>
+					<span class="post-date" id="mybb-post-date"></span>
+				</div>
+				<div class="mybb-post-body" id="renderedBBCode"></div>
+				<div class="mybb-post-footer">
+					Find&ensp;|&ensp;Reply&ensp;|&ensp;Quote
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button id="btnModalCopy" type="button" class="btn btn-primary"><i class="fas fa-copy"></i> Copy BBCode</button>
+			<button id="btnModalClose" type="button" class="btn btn-outline">Close</button>
+		</div>
+	</div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
