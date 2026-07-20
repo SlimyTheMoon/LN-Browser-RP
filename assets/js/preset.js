@@ -470,32 +470,33 @@ function generateRandomEncryption(style) {
 	if (style === 'ex') {
 		// EX style: GreekLetter-EX-SystemName-Number
 		var greekLetters = [
-			'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
-			'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi',
-			'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+			'Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel',
+    		'India', 'Juliett', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa',
+    		'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey',
+    		'X-ray', 'Yankee', 'Zulu'
 		];
 		var systemNames = [
-			'Nexus', 'Vanguard', 'Sentinel', 'Horizon', 'Citadel', 'Bastion',
-			'Aegis', 'Tempest', 'Pulsar', 'Helix', 'Forge', 'Apex',
-			'Zenith', 'Obsidian', 'Cipher', 'Prism', 'Vertex', 'Nova'
+			'PuertoRico', 'Virginia', 'Kansas', 'California', 'Pennsylvania', 'Texas',
+			'Minnesota', 'Quebec', 'NewHampshire', 'Alaska', 'Ellesmere', 'Illinois',
+			'Colorado', 'Yukon', 'Alberta', 'Ontario', 'NewYork', 'Galileo'
 		];
 		var bracket1 = greekLetters[Math.floor(Math.random() * greekLetters.length)];
 		var bracket2 = systemNames[Math.floor(Math.random() * systemNames.length)];
 		var number = Math.floor(Math.random() * 1000);
-		return bracket1 + '-EX-' + bracket2 + '-' + number;
+		return bracket1 + '-Navy-' + bracket2 + '-' + number;
 	}
 
-	// RHW style: BritishCity-RHW-Number
+	// ESRD style: BritishCity-RHW-Number
 	var britishCities = [
-		'London', 'Manchester', 'Birmingham', 'Liverpool', 'Edinburgh',
-		'Glasgow', 'Bristol', 'Leeds', 'Sheffield', 'Newcastle',
-		'Cardiff', 'Belfast', 'Oxford', 'Cambridge', 'Brighton',
-		'York', 'Bath', 'Canterbury', 'Plymouth', 'Southampton',
-		'Nottingham', 'Leicester', 'Aberdeen', 'Dundee', 'Swansea'
+		'Aegis', 'Apex', 'Archangel', 'Blackout', 'Broadsword',
+    	'Cobalt', 'Crossbow', 'Echelon', 'Eclipse', 'Enigma',
+    	'Falcon', 'Firewall', 'Goliath', 'Halberd', 'Keystone',
+    	'Mirage', 'Nightwatch', 'Obsidian', 'Onyx', 'Overwatch',
+    	'Paladin', 'Pinnacle', 'Sentinel', 'Vanguard', 'Wraith'
 	];
 	var city = britishCities[Math.floor(Math.random() * britishCities.length)];
 	var number = Math.floor(Math.random() * 1000);
-	return city + '-RHW-' + number;
+	return city + '-ESRD-' + number;
 }
 
 function renderRawTemplate() {
