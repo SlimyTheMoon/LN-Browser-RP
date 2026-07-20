@@ -534,7 +534,7 @@ function renderRawTemplate() {
 // --- initTemplateChooser template naming---
 var templateFiles = [
 	{ path: 'assets/templates/template.md', name: 'Standard Template' },
-	{ path: 'assets/templates/template_rhw.md', name: 'ESRD Template' }
+	{ path: 'assets/templates/template_esrd.md', name: 'ESRD Template' }
 ];
 
 function loadTemplateFile(filePath) {
