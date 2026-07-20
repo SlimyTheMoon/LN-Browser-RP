@@ -66,6 +66,23 @@ function getval(sel)
 	if (sel.value == 3) 
 	// Template Three
 	{
+		document.form1.commid.value = "Jack Boehm";
+		document.form1.position.value = "Admiral";
+		document.form1.charposition.value = "Admiral";
+		// document.form1.recipient.value = "";
+		// document.form1.ccrecipient.value = "";
+		// document.form1.bccrecipient.value = "";
+		// document.form1.subject.value = "";
+		document.form1.message.value = "";
+		document.form1.titleattach.value = "";
+		document.form1.attachment.value = "";
+		document.form1.headerimg.value = "";
+		document.form1.footerimg.value = "";
+	}
+
+	if (sel.value == 4) 
+	// Template Four
+	{
 		document.form1.commid.value = "Amelia Hale";
 		document.form1.position.value = "Commodore";
 		document.form1.charposition.value = "Commodore";
@@ -80,8 +97,25 @@ function getval(sel)
 		document.form1.footerimg.value = "";
 	}
 
-	if (sel.value == 4) 
-	// Template Four
+	if (sel.value == 5) 
+	// Template Five
+	{
+		document.form1.commid.value = "Ryan Hill";
+		document.form1.position.value = "Commander";
+		document.form1.charposition.value = "Commander";
+		// document.form1.recipient.value = "";
+		// document.form1.ccrecipient.value = "";
+		// document.form1.bccrecipient.value = "";
+		// document.form1.subject.value = "";
+		document.form1.message.value = "";
+		document.form1.titleattach.value = "";
+		document.form1.attachment.value = "";
+		document.form1.headerimg.value = "";
+		document.form1.footerimg.value = "";
+	}
+
+	if (sel.value == 6) 
+	// Template Six
 	{
 		document.form1.commid.value = "Claire Valenzuela";
 		document.form1.position.value = "Lieutenant Commander";
@@ -97,8 +131,25 @@ function getval(sel)
 		document.form1.footerimg.value = "";
 	}
 
-	if (sel.value == 5) 
-	// Template Five
+	if (sel.value == 7) 
+	// Template Seven
+	{
+		document.form1.commid.value = "Daniel White";
+		document.form1.position.value = "Lieutenant Commander";
+		document.form1.charposition.value = "Lieutenant Commander";
+		// document.form1.recipient.value = "";
+		// document.form1.ccrecipient.value = "";
+		// document.form1.bccrecipient.value = "";
+		// document.form1.subject.value = "";
+		document.form1.message.value = "";
+		document.form1.titleattach.value = "";
+		document.form1.attachment.value = "";
+		document.form1.headerimg.value = "";
+		document.form1.footerimg.value = "";
+	}
+
+	if (sel.value == 8) 
+	// Template Eight
 	{
 		document.form1.commid.value = "Chris \"Otter\" Richmond";
 		document.form1.position.value = "Lieutenant";
@@ -114,8 +165,8 @@ function getval(sel)
 		document.form1.footerimg.value = "";
 	}
 
-	if (sel.value == 6) 
-	// Template Six
+	if (sel.value == 9) 
+	// Template Nine
 	{
 		document.form1.commid.value = "Donbastio Whitaker";
 		document.form1.position.value = "Lieutenant";
@@ -131,10 +182,10 @@ function getval(sel)
 		document.form1.footerimg.value = "";
 	}
 
-	if (sel.value == 7) 
-	// Template Seven
+	if (sel.value == 10) 
+	// Template Ten
 	{
-		document.form1.commid.value = "Scoot L. Bradly";
+		document.form1.commid.value = "Scott L. Bradly";
 		document.form1.position.value = "Lieutenant";
 		document.form1.charposition.value = "Lieutenant";
 		// document.form1.recipient.value = "";
@@ -148,8 +199,8 @@ function getval(sel)
 		document.form1.footerimg.value = "";
 	}
 
-	if (sel.value == 8) 
-	// Template Eight
+	if (sel.value == 11) 
+	// Template Eleven
 	{
 		document.form1.commid.value = "Sebastian  Weaver";
 		document.form1.position.value = "Lieutenant";

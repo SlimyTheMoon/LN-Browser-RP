@@ -4,8 +4,9 @@
 Encryption: [color=#BF0000]Maximum[/color][/size]
 
 [size=large]External Security & Research Division
-Liberty Navy, First Fleet
 ENCRYTPTION: [color=red]{{ENCRYPTION}}[/color]
+
+Liberty Navy, First Fleet
 {{CHARPOSITION}} {{NICKNAME}} [/size]
 [/font][/align][/color]
 
