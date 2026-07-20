@@ -534,6 +534,8 @@ function renderRawTemplate() {
 // --- initTemplateChooser template naming---
 var templateFiles = [
 	{ path: 'assets/templates/template.md', name: 'Standard Template' },
+	{ path: 'assets/templates/template_comm.md', name: 'Standard Comm Template' },
+	{ path: 'assets/templates/template_log.md', name: 'Standard Log Template' },
 	{ path: 'assets/templates/template_esrd.md', name: 'ESRD Template' }
 ];
 
