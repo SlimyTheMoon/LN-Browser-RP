@@ -1,6 +1,7 @@
 [hrc]lightblue[/hrc][img float=left]https://i.imgur.com/P9AnuNd.png[/img]
-[align=right][font=Cinzel][size=x-large]Incoming Transmission[/size]
-[size=large]ENCRYTPTION: {{ENCRYPTION}}
+[align=right][font=Cinzel][size=x-large]Incoming Transmission
+Encryption: [color=#BF0000]{{ENCRYPTION}}[/color][/size]
+[size=large]
 Liberty Navy
 First Fleet[/size]
 {{CHARPOSITION}} {{NICKNAME}}
