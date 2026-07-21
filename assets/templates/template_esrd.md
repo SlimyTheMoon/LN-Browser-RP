@@ -1,7 +1,7 @@
 [hrc]lightblue[/hrc][float=left][img=220x150]https://i.imgur.com/mgasxy7.png[/img][/float]
 
 [color=#FFBF40][align=right][font=Cinzel][size=x-large]Incoming Transmission 
-Encryption: [color=#BF0000]Maximum[/color][/size]
+Encryption: [color=#BF0000]{{ENCRYPTION}}[/color][/size]
 
 [size=large]External Security & Research Division
 Liberty Navy, First Fleet
