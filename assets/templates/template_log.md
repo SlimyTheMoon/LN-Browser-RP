@@ -10,7 +10,7 @@ First Fleet[/size]
 [hrc]lightblue[/hrc]
 
 [font=Open Sans][pi amount=10][color=#FFFFFF][b]{{SUBJECT}} - {{DATE}}[/b][/color][/pi]
-[pi amount=15][color=lightblue]
+[pi amount=15][color=#80FFFF]
 
 {{MESSAGE}}
 
